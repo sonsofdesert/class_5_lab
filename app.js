@@ -55,20 +55,22 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
   var sum1 = sum(a,b);
-  var some1Number = sum1[0]
+  var some1Number = sum1[0];
 
   var total = sum(some1Number, c);
   console.log('total is a + b + c', total[0]);
-  total = total[0];
+  total = total[0]; //sum of all three numbers
   var product = multiply(a,b);
   var productNum = product[0];
   var productTotal = multiply(productNum, c);
   productTotal = productTotal[0];
-  var sumMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.';
+  var sumMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + total + '.';
   console.log(sumMessage);
-  var productMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.';
+  var productMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productTotal + '.';
   console.log(productMessage);
-  return [sum, product, sumMessage, productMessage];
+  var figureItOut = [total, productTotal, sumMessage, productMessage];
+  console.log('figureItOut: ', figureItOut);
+  return figureItOut;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
